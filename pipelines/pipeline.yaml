@@ -17,7 +17,7 @@ resources:
     type: s3
     source:
       bucket: ((storage_bucket_name))
-      regexp: otel-extension/artifacts/otel-extension-(.*)-standalone.jar
+      regexp: otel-extension/artifacts/otel-extension-(.*)-all.jar
       region_name: ((storage_bucket_region))
       server_side_encryption: ((storage_bucket_encryption))
       access_key_id: ((aws_access_key_id))
@@ -73,7 +73,7 @@ jobs:
 
       - put: dist
         params:
-          file: dist/otel-extension-*-standalone.jar
+          file: dist/otel-extension-*-all.jar
 
     on_success:
       put: notify-success

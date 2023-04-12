@@ -28,6 +28,5 @@ contain extension jars) for the `otel.javaagent.extensions` value.
 
 ## Releasing
 
-The current release process is manual. 
-Build the binary with `./gradlew build`, tag the release in git and 
-create a GitHub release with the binary attached.
+Grab the version you want to release from S3 and create a new
+GitHub release and attach the jar as a release binary.

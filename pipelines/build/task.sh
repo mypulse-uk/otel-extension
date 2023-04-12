@@ -16,7 +16,7 @@ export GIT_SHA="$(git rev-parse --short HEAD)"
 
 mkdir -p "$PROJECT_DIR/build"
 cp "$ROOT_DIR/version/version" "$PROJECT_DIR/build/version"
-VERSION=$(./go version | tail -n 1)
+export VERSION=$(./go version | tail -n 1)
 
 ./go library:build
 

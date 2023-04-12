@@ -1,0 +1,18 @@
+---
+component: "otel-extension"
+short_component: "otel-extension"
+
+deployment_identifier: "%{deployment_type}-%{deployment_label}"
+
+source_repository_url: "git@github.com:mypulse-uk/otel-extension.git"
+source_repository_branch: "master"
+
+private_network_cidr: "10.0.0.0/8"
+
+goh_mypulse_management_account_id: "540704493892"
+
+storage_bucket_name: "goh-mypulse-%{hiera('short_component')}-%{hiera('deployment_identifier')}"
+storage_bucket_encryption: "AES256"
+
+common_region: "eu-west-2"
+ci_region: "eu-west-2"

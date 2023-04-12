@@ -1,0 +1,16 @@
+---
+# General
+deployment_region: "eu-west-2"
+
+storage_bucket_allowed_account_ids: []
+
+# Pipelines
+application_builder_image_repository: "%{hiera('goh_mypulse_management_account_id')}.dkr.ecr.%{hiera('ci_region')}.amazonaws.com:443/goh-mypulse/application-builder"
+application_builder_image_tag: "0.1.0-rc.93_10cdb74"
+service_image_repository: "%{hiera('goh_mypulse_management_account_id')}.dkr.ecr.%{hiera('ci_region')}.amazonaws.com:443/goh-mypulse/%{hiera('component')}"
+
+ci_provisioning_role_arn: "arn:aws:iam::%{hiera('goh_mypulse_management_account_id')}:role/provisioning-role-ci-server-mypulse-management-default"
+ci_deployment_type: "mypulse-management"
+ci_deployment_label: "default"
+
+ci_server_url: "https://ci-server-default.mypulse-management.mypulse.technology/"
